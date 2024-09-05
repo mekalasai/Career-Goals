@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  html, body{
+padding:0px;
+margin:0px;
+background:#191A1D;
+font-family: 'Karla', sans-serif;
+width:100vw;
+ }
+ body * {
+margin:0;
+padding:0;
+ }
+ 
+ 
+ nav menuitem {
+position:relative;
+display:block;
+opacity:0;
+cursor:pointer;
+ }
+ 
+ nav menuitem > menu {
+position: absolute;
+pointer-events:none;
+ }
+ nav > menu { display:flex; }
+ 
+ nav > menu > menuitem { pointer-events: all; opacity:1; }
+ menu menuitem a { white-space:nowrap; display:block; }
+
+ menuitem:hover > menu {
+pointer-events:initial;
+   z-index:1;
+ }
+ menuitem:hover > menu > menuitem,
+ menu:hover > menuitem{
+opacity:1;
+   z-index:1;
+ }
+ nav > menu > menuitem menuitem menu {
+transform:translateX(100%);
+top:0; right:0;
+   z-index:2;
+ }
+ 
+ nav {
+margin-top: 40px;
+
+margin-bottom: 15vh;
+ }
+ 
+ nav a {
+background:#75F;
+color:#FFF;
+min-width:190px;
+transition: background 0.5s, color 0.5s, transform 0.5s;
+margin:0px 6px 6px 0px;
+padding:20px 40px;
+box-sizing:border-box;
+border-radius:3px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+position:relative;
+z-index: 0;
+ }
+ 
+ nav a:hover:before {
+content: '';
+top:0;left:0;
+position:absolute;
+background:rgba(0, 0, 0, 0.2);
+width:100%;
+height:100%;
+ }
+ 
+ nav > menu > menuitem > a + menu:after{
+content: '';
+position:absolute;
+border:10px solid transparent;
+border-top: 10px solid white;
+left:12px;
+top: -40px;
+   
+ }
+ nav menuitem > menu > menuitem > a + menu:after{
+content: '';
+position:absolute;
+border:10px solid transparent;
+border-left: 10px solid white;
+top: 20px;
+left:-180px;
+transition: opacity 0.6, transform 0s;
+   z-index:3;
+ }
+ 
+ nav > menu > menuitem > menu > menuitem{
+transition: transform 0.6s, opacity 0.6s;
+transform:translateY(150%);
+opacity:0;
+   z-index:1;
+ }
+ nav > menu > menuitem:hover > menu > menuitem,
+ nav > menu > menuitem.hover > menu > menuitem{
+transform:translateY(0%);
+opacity: 1;
+  z-index:1;
+ }
+ 
+ menuitem > menu > menuitem > menu > menuitem{
+transition: transform 0.6s, opacity 0.6s;
+transform:translateX(195px) translateY(0%);
+opacity: 0;
+   z-index:1;
+   
+ }
+ menuitem > menu > menuitem:hover > menu > menuitem,  
+ menuitem > menu > menuitem.hover > menu > menuitem{  
+transform:translateX(0) translateY(0%);
+opacity: 1;
+  z-index:1;
+ }
+
+ 
+.content{
+display: flex;
+justify-content: space-evenly;
+}
+.content1{
+display: flex;
+justify-content: space-evenly;
+}
+.maincontainer{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+margin-bottom: 25vh;
+}
+.demo1{
+  z-index:0;
+}
+  </style>
+  <title>Strength</title>
+</head>
+<body style="overflow-x: hidden;">
+  <div class="maincontainer">
+  <div class="content">
+  <nav>
+<menu>
+<menuitem class="demo1">
+<a>Business and Management</a>
+<menu>
+<menuitem><a>Leadership and Decision-Making</a></menuitem>
+<menuitem><a>Communication and Interpersonal Skills</a></menuitem>
+          <menuitem><a>Problem-Solving and Strategic Thinking</a></menuitem>
+          <menuitem><a>Adaptability and Flexibility</a></menuitem>
+          <menuitem><a>Analytical Skills</a></menuitem>
+          <menuitem><a>Time Management and Organization</a></menuitem>
+
+</menu>
+</nav>
+  <nav>
+<menu>
+<menuitem class="demo1">
+<a>Technical Proficiency & Coding Skills</a>
+<menu>
+<menuitem><a>Problem-Solving and Troubleshooting</a></menuitem>
+<menuitem><a>Attention to Detail</a></menuitem>
+          <menuitem><a>Continuous Learning and Adaptability</a></menuitem>
+          <menuitem><a>Collaboration and Teamwork</a></menuitem>
+          <menuitem><a>Creativity and Innovation</a></menuitem>
+          <menuitem><a>Time Management and Organization</a></menuitem>
+
+</menu>
+</nav>
+  <nav>
+<menu>
+<menuitem class="demo1">
+<a>Healthcare and Medicine</a>
+<menu>
+<menuitem><a>Empathy and Compassion</a></menuitem>
+<menuitem><a>Attention to Detail and Accuracy</a></menuitem>
+          <menuitem><a>Critical Thinking and Problem-Solving</a></menuitem>
+          <menuitem><a>Communication and Interpersonal Skills</a></menuitem>
+          <menuitem><a>Resilience and Adaptability</a></menuitem>
+          <menuitem><a>Continuous Learning and Medical Knowledge</a></menuitem>
+
+</menu>
+</nav>
+  <nav>
+<menu>
+<menuitem class="demo1">
+<a>Engineering and Construction</a>
+<menu>
+<menuitem><a>Analytical and Logical Thinking</a></menuitem>
+<menuitem><a>Problem-Solving and Innovation</a></menuitem>
+          <menuitem><a>Attention to Detail and Precision</a></menuitem>
+          <menuitem><a>Technical Skills and Engineering Knowledge</a></menuitem>
+          <menuitem><a>Communication and Collaboration</a></menuitem>
+          <menuitem><a>Time Management and Organization</a></menuitem>
+
+</menu>
+</nav>
+  </div>
+  <div class="content">
+    <nav>
+      <menu>
+        <menuitem class="demo1">
+          <a>Creative Arts and Design</a>
+          <menu>
+            <menuitem><a>Creativity and Artistic Expression</a></menuitem>
+            <menuitem><a>Attention to Aesthetics and Detail</a></menuitem>
+            <menuitem><a>Visual and Spatial Skills</a></menuitem>
+            <menuitem><a>Innovation and Originality</a></menuitem>
+            <menuitem><a>Adaptability and Openness to Feedback</a></menuitem>
+            <menuitem><a>Technical Proficiency (Software, Tools)</a></menuitem>
+           
+      </menu>
+    </nav>
+    <nav>
+      <menu>
+        <menuitem class="demo1">
+          <a>Science and Research</a>
+          <menu>
+            <menuitem><a>Analytical and Critical Thinking</a></menuitem>
+            <menuitem><a>Curiosity and Inquisitiveness</a></menuitem>
+            <menuitem><a>Attention to Detail and Accuracy</a></menuitem>
+            <menuitem><a>Research and Problem-Solving Skills</a></menuitem>
+            <menuitem><a>Methodical and Logical Approach</a></menuitem>
+            <menuitem><a>Data Analysis and Interpretation</a></menuitem>
+           
+      </menu>
+    </nav>
+    <nav>
+      <menu>
+        <menuitem class="demo1">
+          <a>Education and Academia</a>
+          <menu>
+            <menuitem><a>Passion for Teaching and Learning</a></menuitem>
+            <menuitem><a>Communication and Presentation Skills</a></menuitem>
+            <menuitem><a>Empathy and Patience</a></menuitem>
+            <menuitem><a>Adaptability to Different Learning Styles</a></menuitem>
+            <menuitem><a>Curriculum Development</a></menuitem>
+            <menuitem><a>Classroom Management</a></menuitem>
+           
+      </menu>
+    </nav>
+    <nav>
+      <menu>
+        <menuitem class="demo1">
+          <a>Finance and Accounting</a>
+          <menu>
+            <menuitem><a>Numerical and Analytical Skills</a></menuitem>
+            <menuitem><a>Attention to Detail and Accuracy</a></menuitem>
+            <menuitem><a>Problem-Solving and Decision-Making</a></menuitem>
+            <menuitem><a>Financial Analysis and Interpretation</a></menuitem>
+            <menuitem><a>Ethical and Integrity</a></menuitem>
+            <menuitem><a>Adaptability to Regulatory Changes</a></menuitem>
+           
+      </menu>
+    </nav>
+    </div>
+    <div class="content1">
+      <nav>
+        <menu>
+          <menuitem class="demo1">
+            <a>Sales and Marketing</a>
+            <menu>
+              <menuitem><a>Communication and Persuasion Skills</a></menuitem>
+              <menuitem><a>Creativity in Marketing Strategies</a></menuitem>
+              <menuitem><a>Market Research and Data Analysis</a></menuitem>
+              <menuitem><a>Relationship Building and Networking</a></menuitem>
+              <menuitem><a>Adaptability to Market Trends</a></menuitem>
+              <menuitem><a>Goal-Oriented and Resilience</a></menuitem>
+             
+        </menu>
+      </nav>
+      <nav>
+        <menu>
+          <menuitem class="demo1">
+            <a>Social Services and Nonprofits</a>
+            <menu>
+              <menuitem><a>Empathy and Active Listening</a></menuitem>
+              <menuitem><a>Communication and Interpersonal Skills</a></menuitem>
+              <menuitem><a>Cultural Competence and Sensitivity</a></menuitem>
+              <menuitem><a>Problem-Solving and Crisis Management</a></menuitem>
+              <menuitem><a>Advocacy and Social Change</a></menuitem>
+              <menuitem><a>Patience and Resilience</a></menuitem>
+             
+        </menu>
+      </nav>
+      <nav>
+        <menu>
+          <menuitem class="demo1">
+            <a>Government and Public Administration</a>
+            <menu>
+              <menuitem><a>Analytical and Research Skills</a></menuitem>
+              <menuitem><a>Communication and Public Speaking</a></menuitem>
+              <menuitem><a>Leadership and Decision-Making</a></menuitem>
+              <menuitem><a>Policy Analysis and Development</a></menuitem>
+              <menuitem><a>Adaptability to Changing Regulations</a></menuitem>
+              <menuitem><a>Diplomacy and Negotiation</a></menuitem>
+             
+        </menu>
+      </nav>
+      <nav>
+        <menu>
+          <menuitem class="demo1">
+            <a>Transportation and Logistics</a>
+            <menu>
+              <menuitem><a>Attention to Detail and Accuracy</a></menuitem>
+              <menuitem><a>Problem-Solving and Decision-Making</a></menuitem>
+              <menuitem><a>Organizational and Planning Skills</a></menuitem>
+              <menuitem><a>Technical Proficiency (e.g., Navigation)</a></menuitem>
+              <menuitem><a>Time Management and Efficiency</a></menuitem>
+              <menuitem><a>Adaptability to Schedules and Routes</a></menuitem>
+             
+        </menu>
+      </nav>
+      </div>
+      <div class="content1">
+        <nav>
+          <menu>
+            <menuitem class="demo1">
+              <a>Manufacturing and Production</a>
+              <menu>
+                <menuitem><a>Attention to Detail and Quality Control</a></menuitem>
+                <menuitem><a>Problem-Solving and Process Improvement</a></menuitem>
+                <menuitem><a>Technical Skills and Equipment Operation</a></menuitem>
+                <menuitem><a>Collaboration and Teamwork</a></menuitem>
+                <menuitem><a>Safety Awareness and Compliance</a></menuitem>
+                <menuitem><a>Lean Manufacturing Principles</a></menuitem>
+               
+          </menu>
+        </nav>
+        <nav>
+          <menu>
+            <menuitem class="demo1">
+              <a>Business and Management</a>
+              <menu>
+                <menuitem><a>Leadership and Decision-Making</a></menuitem>
+                <menuitem><a>Communication and Interpersonal Skills</a></menuitem>
+                <menuitem><a>Problem-Solving and Strategic Thinking</a></menuitem>
+                <menuitem><a>Adaptability and Flexibility</a></menuitem>
+                <menuitem><a>Analytical Skills</a></menuitem>
+                <menuitem><a>Time Management and Organization</a></menuitem>
+               
+          </menu>
+        </nav>
+        <nav>
+          <menu>
+            <menuitem class="demo1">
+              <a>Agriculture and Natural Resources</a>
+              <menu>
+                <menuitem><a>Agricultural Knowledge and Expertise</a></menuitem>
+                <menuitem><a>Attention to Plant and Animal Health</a></menuitem>
+                <menuitem><a>Problem-Solving in Crop Management</a></menuitem>
+                <menuitem><a>Sustainability and Environmental Awareness</a></menuitem>
+                <menuitem><a>Physical Stamina and Outdoor Skills</a></menuitem>
+                <menuitem><a>Adaptability to Weather and Seasons</a></menuitem>
+               
+          </menu>
+        </nav>
+        <nav>
+          <menu>
+            <menuitem class="demo1">
+              <a>Sports and Recreation</a>
+              <menu>
+                <menuitem><a>Physical Fitness and Skill Proficiency</a></menuitem>
+                <menuitem><a>Coaching and Teaching Abilities</a></menuitem>
+                <menuitem><a>Communication and Motivation</a></menuitem>
+                <menuitem><a>Leadership and Team Building</a></menuitem>
+                <menuitem><a>Adaptability to Different Sports</a></menuitem>
+                <menuitem><a>Sports Science and Training Knowledge</a></menuitem>
+               
+          </menu>
+        </nav>
+        </div>
+  <script src="page.js"></script>
+  </div>
+</body>
+</html>
